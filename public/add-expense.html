@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Add Expense - Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <!-- Authentication check -->
+    <script>
+      // Check if user is logged in
+      if (!localStorage.getItem("token")) {
+        window.location.href = "login.html";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header-container">
+      <h1>Add New Expense</h1>
+      <!-- Hamburger Menu Button (only visible on mobile) -->
+      <button class="hamburger-btn" id="menu-btn">☰</button>
+      <!-- Desktop Logout Button (hidden on mobile) -->
+      <button id="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Side Menu (for mobile) -->
+    <div class="side-menu" id="side-menu">
+      <a href="index.html" class="menu-item">🏠 Dashboard</a>
+      <a href="expenses-list.html" class="menu-item">📋 View Expenses</a>
+      <a href="expense-chart.html" class="menu-item">📊 Expense Chart</a>
+      <a href="bills.html" class="menu-item">📅 View Bills</a>
+      <button class="menu-item" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Add Expense Form -->
+    <form id="expense-form">
+      <input type="text" id="title" placeholder="Title" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <!-- Categories will be loaded dynamically from the API -->
+      </select>
+
+      <input type="date" id="date" required />
+      <input type="text" id="note" placeholder="Note (optional)" />
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <!-- Footer Section with Greeting and Income Update -->
+    <div
+      id="footer-income-section"
+      style="text-align: center; margin-top: 40px"
+    >
+      <h1 id="greeting"></h1>
+      <h1 id="remaining">Remaining this month: ₹0</h1>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div
+      style="
+        text-align: center;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      "
+    >
+      <a href="index.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          🏠 Dashboard
+        </button>
+      </a>
+      <a href="expenses-list.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          📋 View Expenses
+        </button>
+      </a>
+      <a href="expense-chart.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          📊 Expense Chart
+        </button>
+      </a>
+      <a href="bills.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          📅 View Bills
+        </button>
+      </a>
+    </div>
+
+    <!-- Load the script -->
+    <script src="add-expense.js"></script>
+  </body>
+</html>

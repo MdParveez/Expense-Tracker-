@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Expense Tracker Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <!-- Authentication check -->
+    <script>
+      // Check if user is logged in
+      if (!localStorage.getItem("token")) {
+        window.location.href = "login.html";
+      }
+    </script>
+    <style>
+      .feature-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 15px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        flex: 1 1 300px;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .feature-icon {
+        font-size: 48px;
+        margin-bottom: 15px;
+      }
+
+      .feature-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #2c3e50;
+      }
+
+      .feature-description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .feature-button {
+        background-color: #2c3e50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .feature-button:hover {
+        background-color: #34495e;
+      }
+
+      .features-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .summary-container {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .summary-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .summary-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+
+      .view-all-link {
+        color: #3498db;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .view-all-link:hover {
+        color: #2980b9;
+        text-decoration: underline;
+      }
+
+      .expense-cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .expense-card {
+        background-color: white;
+        border-radius: 8px;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+      }
+
+      .expense-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+      }
+
+      .expense-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .expense-title {
+        font-weight: 600;
+        font-size: 16px;
+        color: #2c3e50;
+      }
+
+      .expense-details {
+        display: flex;
+        gap: 10px;
+        font-size: 13px;
+        color: #7f8c8d;
+      }
+
+      .expense-category {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+      }
+
+      .expense-date {
+        font-size: 13px;
+        color: #7f8c8d;
+      }
+
+      .expense-amount {
+        font-weight: bold;
+        font-size: 18px;
+        color: #2c3e50;
+      }
+
+      /* Category colors */
+      .category-Food {
+        background-color: #ff6384;
+      }
+      .category-Social-Life {
+        background-color: #36a2eb;
+      }
+      .category-Self-Development {
+        background-color: #4bc0c0;
+      }
+      .category-Transportation {
+        background-color: #ffce56;
+      }
+      .category-HouseHold {
+        background-color: #9966ff;
+      }
+      .category-Apparel {
+        background-color: #ff9f40;
+      }
+      .category-Beauty {
+        background-color: #8ac249;
+      }
+      .category-Health {
+        background-color: #ea526f;
+      }
+      .category-Education {
+        background-color: #23b5d3;
+      }
+      .category-Gift {
+        background-color: #279af1;
+      }
+      .category-Other {
+        background-color: #7e6b8f;
+      }
+
+      .no-expenses-message {
+        text-align: center;
+        padding: 30px 20px;
+        color: #95a5a6;
+        font-size: 15px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 768px) {
+        .feature-card {
+          flex: 1 1 100%;
+          margin: 10px;
+        }
+
+        .summary-container {
+          padding: 15px;
+          margin: 15px 10px;
+        }
+
+        .expense-card {
+          padding: 12px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+        }
+
+        .expense-info {
+          width: 100%;
+        }
+
+        .expense-details {
+          flex-wrap: wrap;
+        }
+
+        .expense-amount {
+          width: 100%;
+          text-align: right;
+          margin-top: 5px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .summary-container {
+          padding: 12px;
+          margin: 10px 5px;
+        }
+
+        .expense-title {
+          font-size: 15px;
+        }
+
+        .expense-details {
+          font-size: 12px;
+        }
+
+        .expense-category {
+          font-size: 11px;
+          padding: 2px 6px;
+        }
+
+        .expense-amount {
+          font-size: 16px;
+        }
+      }
+
+      /* Hamburger menu styling is now handled by mobile.css */
+    </style>
+  </head>
+  <body>
+    <div class="header-container">
+      <h1>Personal Expense Tracker</h1>
+      <!-- Hamburger Menu Button (only visible on mobile) -->
+      <button class="hamburger-btn" id="menu-btn">☰</button>
+      <!-- Desktop Logout Button (hidden on mobile) -->
+      <button id="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Side Menu (for mobile) -->
+    <div class="side-menu" id="side-menu">
+      <a href="add-expense.html" class="menu-item">➕ Add Expense</a>
+      <a href="expenses-list.html" class="menu-item">📋 View Expenses</a>
+      <a href="expense-chart.html" class="menu-item">📊 Expense Chart</a>
+      <a href="bills.html" class="menu-item">📅 View Bills</a>
+      <button class="menu-item" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Welcome Section -->
+    <div
+      id="footer-income-section"
+      style="text-align: center; margin: 30px auto"
+    >
+      <h1 id="greeting"></h1>
+      <h1 id="remaining">Remaining this month: ₹0</h1>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-container">
+      <!-- Add Expense Feature -->
+      <div class="feature-card">
+        <div>
+          <div class="feature-icon">➕</div>
+          <div class="feature-title">Add New Expense</div>
+          <div class="feature-description">
+            Record your daily expenses with categories and notes
+          </div>
+        </div>
+        <a href="add-expense.html">
+          <button class="feature-button">Add Expense</button>
+        </a>
+      </div>
+
+      <!-- View Expenses Feature -->
+      <div class="feature-card">
+        <div>
+          <div class="feature-icon">📋</div>
+          <div class="feature-title">View Expenses</div>
+          <div class="feature-description">
+            Browse, search, and manage all your recorded expenses
+          </div>
+        </div>
+        <a href="expenses-list.html">
+          <button class="feature-button">View Expenses</button>
+        </a>
+      </div>
+
+      <!-- Expense Chart Feature -->
+      <div class="feature-card">
+        <div>
+          <div class="feature-icon">📊</div>
+          <div class="feature-title">Expense Chart</div>
+          <div class="feature-description">
+            Visualize your spending patterns by category
+          </div>
+        </div>
+        <a href="expense-chart.html">
+          <button class="feature-button">View Chart</button>
+        </a>
+      </div>
+
+      <!-- Bills Feature -->
+      <div class="feature-card">
+        <div>
+          <div class="feature-icon">📅</div>
+          <div class="feature-title">Recurring Bills</div>
+          <div class="feature-description">
+            Manage your monthly recurring payments and bills
+          </div>
+        </div>
+        <a href="bills.html">
+          <button class="feature-button">View Bills</button>
+        </a>
+      </div>
+
+
+       <!-- Prediction Feature -->
+      <div class="feature-card">
+        <div>
+          <div class="feature-icon">📅</div>
+          <div class="feature-title">Predict Expenses</div>
+          <div class="feature-description">
+           Predict your expenses for the next month
+          </div>
+        </div>
+        <a href="prediction.html">
+          <button class="feature-button">Predict</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Recent Expenses Summary -->
+    <div class="summary-container">
+      <div class="summary-header">
+        <div class="summary-title">Recent Expenses</div>
+        <a href="expenses-list.html" class="view-all-link">View All</a>
+      </div>
+      <div class="expense-cards-container" id="recent-expenses-container">
+        <!-- Expense cards will be added here by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Load the dashboard script -->
+    <script src="index.js"></script>
+  </body>
+</html>

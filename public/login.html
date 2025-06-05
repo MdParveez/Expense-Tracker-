@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Login - Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="auth-header">
+        <h1>Login to Expense Tracker</h1>
+      </div>
+
+      <div id="auth-error" class="auth-error"></div>
+
+      <form id="login-form" class="auth-form">
+        <input type="email" id="email" placeholder="Email" required />
+        <div class="password-container">
+          <input
+            type="password"
+            id="password"
+            class="password-field"
+            placeholder="Password"
+            required
+          />
+          <span
+            class="password-toggle"
+            onclick="togglePasswordVisibility('password')"
+          >
+            <i class="fa-solid fa-eye"></i>
+          </span>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+
+      <div class="auth-footer">
+        Don't have an account? <a href="register.html">Register</a>
+      </div>
+    </div>
+
+    <script>
+      const loginForm = document.getElementById("login-form");
+      const errorDiv = document.getElementById("auth-error");
+
+      loginForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        // Simple validation
+        if (!email || !password) {
+          showError("Please enter both email and password");
+          return;
+        }
+
+        // Show loading state
+        const submitBtn = loginForm.querySelector("button[type='submit']");
+        submitBtn.textContent = "Logging in...";
+        submitBtn.disabled = true;
+
+        try {
+          // Send login request to API
+          const response = await fetch("/api/auth/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, password }),
+          });
+
+          if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(errorText || "Login failed");
+          }
+
+          const data = await response.json();
+
+          // Store token and user data
+          localStorage.setItem("token", data.token);
+          localStorage.setItem("user", JSON.stringify(data.user));
+
+          // Redirect to dashboard
+          window.location.href = "index.html";
+        } catch (err) {
+          showError(err.message);
+          submitBtn.textContent = "Login";
+          submitBtn.disabled = false;
+        }
+      });
+
+      // Helper function to show error messages
+      function showError(message) {
+        errorDiv.textContent = message;
+        errorDiv.style.display = "block";
+
+        // Hide error after 5 seconds
+        setTimeout(() => {
+          errorDiv.style.display = "none";
+        }, 5000);
+      }
+
+      // Function to toggle password visibility
+      function togglePasswordVisibility(inputId) {
+        const passwordInput = document.getElementById(inputId);
+        const toggleIcon =
+          passwordInput.parentElement.querySelector(".password-toggle i");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          toggleIcon.className = "fa-solid fa-eye-slash"; // Closed eye icon
+        } else {
+          passwordInput.type = "password";
+          toggleIcon.className = "fa-solid fa-eye"; // Open eye icon
+        }
+      }
+    </script>
+  </body>
+</html>

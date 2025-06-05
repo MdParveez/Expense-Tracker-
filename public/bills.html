@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Recurring Bills - Expense Tracker</title>
+    <link rel="stylesheet" href="style.css?v=1.0.1" />
+    <link rel="stylesheet" href="mobile.css?v=1.0.1" />
+    <!-- Cache busting script -->
+    <script>
+      // Add cache busting to prevent stale resources
+      const cacheBuster = Date.now();
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll('link[rel="stylesheet"]');
+        const scripts = document.querySelectorAll("script[src]");
+
+        // Update CSS links
+        links.forEach((link) => {
+          if (link.href && !link.href.includes("firebase")) {
+            link.href =
+              link.href +
+              (link.href.includes("?") ? "&" : "?") +
+              "cb=" +
+              cacheBuster;
+          }
+        });
+
+        // Update JS scripts
+        scripts.forEach((script) => {
+          if (script.src && !script.src.includes("firebase")) {
+            script.src =
+              script.src +
+              (script.src.includes("?") ? "&" : "?") +
+              "cb=" +
+              cacheBuster;
+          }
+        });
+      });
+    </script>
+    <!-- Authentication check -->
+    <script>
+      // Check if user is logged in
+      if (!localStorage.getItem("token")) {
+        window.location.href = "login.html";
+      }
+    </script>
+
+    <!-- Firebase App (using v11.7.1 with modules) -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-analytics.js";
+      import {
+        getMessaging,
+        getToken,
+        onMessage,
+      } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDyJ6axUfgY43ChacbGFTKp3BhLUFKqUsE",
+        authDomain: "expensify-401ce.firebaseapp.com",
+        projectId: "expensify-401ce",
+        storageBucket: "expensify-401ce.firebasestorage.app",
+        messagingSenderId: "668626190094",
+        appId: "1:668626190094:web:5995bde4ca4983872b615f",
+        measurementId: "G-9BVWQT70Q6",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      // Initialize Firebase Messaging and make it available globally
+      const messaging = getMessaging(app);
+
+      // Make Firebase components available globally
+      window.firebaseApp = app;
+      window.firebaseMessaging = messaging;
+      window.firebaseGetToken = getToken;
+      window.firebaseOnMessage = onMessage;
+    </script>
+  </head>
+  <body>
+    <div class="header-container">
+      <h1>Recurring Payments</h1>
+      <!-- Hamburger Menu Button -->
+      <button class="hamburger-btn" id="menu-btn">☰</button>
+      <!-- Desktop Logout Button (hidden on mobile) -->
+      <button id="logout-btn" onclick="logout()">Logout</button>
+      <!-- Notification Permission Button -->
+      <button id="notification-btn">Enable Notifications</button>
+    </div>
+
+    <!-- Side Menu (for mobile) -->
+    <div class="side-menu" id="side-menu">
+      <a href="index.html" class="menu-item">🏠 Dashboard</a>
+      <a href="add-expense.html" class="menu-item">➕ Add Expense</a>
+      <a href="expenses-list.html" class="menu-item">📋 View Expenses</a>
+      <a href="expense-chart.html" class="menu-item">📊 Expense Chart</a>
+      <button class="menu-item" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Bill Form -->
+    <form id="bill-form">
+      <input type="text" id="bill-name" placeholder="Expense Name" required />
+      <input type="number" id="bill-amount" placeholder="Amount" required />
+      <input
+        type="number"
+        id="bill-date"
+        placeholder="Day of Month (1-31)"
+        min="1"
+        max="31"
+        required
+      />
+      <div class="form-group">
+        <label for="bill-specific-date">Specific Date (Optional):</label>
+        <input
+          type="date"
+          id="bill-specific-date"
+          placeholder="Specific Date (Optional)"
+        />
+      </div>
+      <div class="form-group">
+        <label for="bill-notification-hours">Hours Before to Notify:</label>
+        <input
+          type="number"
+          id="bill-notification-hours"
+          placeholder="Hours Before to Notify"
+          min="1"
+          max="72"
+          value="3"
+        />
+      </div>
+      <button type="submit">Add Bill</button>
+    </form>
+
+    <h2>Your Recurring Bills</h2>
+    <table id="bills-table">
+      <thead>
+        <tr>
+          <th>Expense Name</th>
+          <th>Amount</th>
+          <th>Payment Date</th>
+          <th>Specific Date</th>
+          <th>Notification</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <h3 id="total-recurring" style="text-align: center; margin-top: 20px"></h3>
+
+    <!-- Edit Bill Modal -->
+    <div id="edit-bill-modal" class="modal" style="display: none">
+      <h3>Edit Bill</h3>
+      <input
+        type="text"
+        id="edit-bill-name"
+        placeholder="Expense Name"
+        required
+      />
+      <input
+        type="number"
+        id="edit-bill-amount"
+        placeholder="Amount"
+        required
+      />
+      <input
+        type="number"
+        id="edit-bill-date"
+        placeholder="Day of Month (1-31)"
+        min="1"
+        max="31"
+        required
+      />
+      <div class="form-group">
+        <label for="edit-bill-specific-date">Specific Date (Optional):</label>
+        <input
+          type="date"
+          id="edit-bill-specific-date"
+          placeholder="Specific Date (Optional)"
+        />
+      </div>
+      <div class="form-group">
+        <label for="edit-bill-notification-hours"
+          >Hours Before to Notify:</label
+        >
+        <input
+          type="number"
+          id="edit-bill-notification-hours"
+          placeholder="Hours Before to Notify"
+          min="1"
+          max="72"
+          value="3"
+        />
+      </div>
+      <br /><br />
+      <button id="save-bill-btn">Save</button>
+      <button onclick="toggleBillModal(false)">Cancel</button>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div
+      style="
+        text-align: center;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      "
+    >
+      <a href="index.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          🏠 Dashboard
+        </button>
+      </a>
+      <a href="add-expense.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          ➕ Add Expense
+        </button>
+      </a>
+      <a href="expenses-list.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          📋 View Expenses
+        </button>
+      </a>
+      <a href="expense-chart.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          📊 Expense Chart
+        </button>
+      </a>
+    </div>
+
+    <!-- Load the script with cache busting -->
+    <script src="bills.js?v=1.0.1"></script>
+
+    <!-- Clear service worker cache button -->
+    <!-- <script>
+      // Add a clear cache button
+     // document.addEventListener("DOMContentLoaded", function () {
+        const clearCacheBtn = document.createElement("button");
+        clearCacheBtn.textContent = "Clear Cache";
+        clearCacheBtn.className = "cache-btn";
+        clearCacheBtn.onclick = function () {
+          // Clear service worker caches
+          if ("caches" in window) {
+            caches
+              .keys()
+              .then((cacheNames) => {
+                return Promise.all(
+                  cacheNames.map((cacheName) => {
+                    return caches.delete(cacheName);
+                  })
+                );
+              })
+              .then(() => {
+                // Unregister service workers
+                if ("serviceWorker" in navigator) {
+                  navigator.serviceWorker
+                    .getRegistrations()
+                    .then((registrations) => {
+                      for (let registration of registrations) {
+                        registration.unregister();
+                      }
+                      alert("Cache cleared! Reloading page...");
+                      // Force reload from server
+                      window.location.reload(true);
+                    });
+                } else {
+                  alert("Cache cleared! Reloading page...");
+                  window.location.reload(true);
+                }
+              });
+          } else {
+            alert(
+              "Cache API not supported. Try clearing your browser cache manually."
+            );
+            window.location.reload(true);
+          }
+        };
+
+        // Add the button to the button container if it exists, otherwise to the header
+        const buttonContainer = document.querySelector(
+          ".header-buttons-container"
+        );
+        if (buttonContainer) {
+          buttonContainer.appendChild(clearCacheBtn);
+        } else {
+          const headerContainer = document.querySelector(".header-container");
+          if (headerContainer) {
+            headerContainer.appendChild(clearCacheBtn);
+          }
+        }
+      });
+    </script> -->
+  </body>
+</html>

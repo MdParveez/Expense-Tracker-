@@ -1,0 +1,791 @@
+2025-05-11 12:13:25,725 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-11 12:13:25,727 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-11 12:13:25,859 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.88:5000
+2025-05-11 12:13:25,860 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-11 12:13:38,414 - __main__ - INFO - Received prediction request
+2025-05-11 12:13:38,415 - __main__ - INFO - Predicting for user 3, category Dining with 5 recent expenses
+2025-05-11 12:13:38,444 - __main__ - INFO - No saved model found, using statistical approach
+2025-05-11 12:13:38,466 - __main__ - INFO - Prediction complete in 0.05 seconds
+2025-05-11 12:13:38,467 - werkzeug - INFO - 127.0.0.1 - - [11/May/2025 12:13:38] "POST /predict HTTP/1.1" 200 -
+2025-05-11 12:29:40,908 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-11 12:29:40,909 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-11 12:29:40,987 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.109.56:5000
+2025-05-11 12:29:40,988 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-11 12:33:52,190 - werkzeug - INFO - 127.0.0.1 - - [11/May/2025 12:33:52] "[33mGET / HTTP/1.1[0m" 404 -
+2025-05-11 12:33:52,433 - werkzeug - INFO - 127.0.0.1 - - [11/May/2025 12:33:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-11 12:35:01,654 - __main__ - INFO - Received prediction request
+2025-05-11 12:35:01,681 - __main__ - INFO - Predicting for user 3, category Dining with 5 recent expenses
+2025-05-11 12:35:02,043 - __main__ - INFO - No saved model found, using statistical approach
+2025-05-11 12:35:02,150 - __main__ - INFO - Prediction complete in 0.5 seconds
+2025-05-11 12:35:02,153 - werkzeug - INFO - 127.0.0.1 - - [11/May/2025 12:35:02] "POST /predict HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 1, in <module>
+    from flask import Flask, request, jsonify
+ModuleNotFoundError: No module named 'flask'
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 1, in <module>
+    from flask import Flask, request, jsonify
+ModuleNotFoundError: No module named 'flask'
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 1, in <module>
+    from flask import Flask, request, jsonify
+ModuleNotFoundError: No module named 'flask'
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 1, in <module>
+    from flask import Flask, request, jsonify
+ModuleNotFoundError: No module named 'flask'
+2025-05-21 01:06:43,772 - __main__ - INFO - Pre-loading scikit-learn models
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-21 01:06:43,772 - __main__ - INFO - Starting Flask server
+ * Tip: There are .env files present. Install python-dotenv to use them.
+2025-05-21 01:06:43,807 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.109:5000
+2025-05-21 01:06:43,807 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 01:09:04,946 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-21 01:09:04,946 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-21 01:09:05,003 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.109:5000
+2025-05-21 01:09:05,003 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 02:14:26,153 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-21 02:14:26,153 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-21 02:14:26,209 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.109:5000
+2025-05-21 02:14:26,209 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 02:23:08,714 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-21 02:23:08,714 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-21 02:23:08,753 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.109:5000
+2025-05-21 02:23:08,753 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 22:16:33,787 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-21 22:16:33,787 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-21 22:16:33,845 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.109:5000
+2025-05-21 22:16:33,845 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 22:17:28,807 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-21 22:17:28,807 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-21 22:17:28,837 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.109:5000
+2025-05-21 22:17:28,837 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 22:20:05,637 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-21 22:20:05,637 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-21 22:20:05,686 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.109:5000
+2025-05-21 22:20:05,686 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 22:59:55,303 - __main__ - INFO - Received training request
+2025-05-21 22:59:55,305 - __main__ - INFO - Training model for user 2, category Travel with 3 expenses
+2025-05-21 22:59:55,329 - __main__ - INFO - Data loaded: (3, 2)
+2025-05-21 22:59:55,329 - __main__ - WARNING - Not enough data for ML model
+2025-05-21 22:59:55,335 - werkzeug - INFO - 127.0.0.1 - - [21/May/2025 22:59:55] "POST /train HTTP/1.1" 200 -
+2025-05-21 23:00:39,727 - __main__ - INFO - Received training request
+2025-05-21 23:00:39,729 - __main__ - INFO - Training model for user 2, category Travel with 3 expenses
+2025-05-21 23:00:39,730 - __main__ - INFO - Data loaded: (3, 2)
+2025-05-21 23:00:39,730 - __main__ - WARNING - Not enough data for ML model
+2025-05-21 23:00:39,731 - werkzeug - INFO - 127.0.0.1 - - [21/May/2025 23:00:39] "POST /train HTTP/1.1" 200 -
+2025-05-21 23:34:38,158 - __main__ - INFO - Received training request
+2025-05-21 23:34:38,158 - __main__ - INFO - Training model for user 2, category Travel with 3 expenses
+2025-05-21 23:34:38,162 - __main__ - INFO - Data loaded: (3, 2)
+2025-05-21 23:34:38,162 - __main__ - WARNING - Not enough data for ML model
+2025-05-21 23:34:38,170 - werkzeug - INFO - 127.0.0.1 - - [21/May/2025 23:34:38] "POST /train HTTP/1.1" 200 -
+2025-05-21 23:36:39,945 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-21 23:36:39,945 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-21 23:36:39,999 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.109:5000
+2025-05-21 23:36:39,999 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 23:37:03,787 - __main__ - INFO - Received training request
+2025-05-21 23:37:03,787 - __main__ - INFO - Training model for user 2, category Travel with 3 expenses
+2025-05-21 23:37:03,796 - __main__ - INFO - Data loaded: (3, 2)
+2025-05-21 23:37:03,796 - __main__ - WARNING - Not enough data for ML model
+2025-05-21 23:37:03,799 - werkzeug - INFO - 127.0.0.1 - - [21/May/2025 23:37:03] "POST /train HTTP/1.1" 200 -
+2025-05-22 13:04:36,935 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-22 13:04:36,935 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-22 13:04:37,019 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.109:5000
+2025-05-22 13:04:37,019 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-22 13:06:49,543 - __main__ - INFO - Received prediction request
+2025-05-22 13:06:49,548 - __main__ - INFO - Predicting for user 2, category Travel with 5 recent expenses
+2025-05-22 13:06:49,570 - __main__ - INFO - No saved model found, using statistical approach
+2025-05-22 13:06:49,592 - __main__ - INFO - Prediction complete in 0.05 seconds
+2025-05-22 13:06:49,593 - werkzeug - INFO - 127.0.0.1 - - [22/May/2025 13:06:49] "POST /predict HTTP/1.1" 200 -
+2025-05-22 20:29:55,309 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-22 20:29:55,313 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-22 20:29:55,405 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.109:5000
+2025-05-22 20:29:55,405 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-22 20:35:24,988 - __main__ - INFO - Received prediction request
+2025-05-22 20:35:24,990 - __main__ - INFO - Predicting for user 2, category Travel with 5 recent expenses
+2025-05-22 20:35:25,025 - __main__ - INFO - No saved model found, using statistical approach
+2025-05-22 20:35:25,057 - __main__ - INFO - Prediction complete in 0.07 seconds
+2025-05-22 20:35:25,057 - werkzeug - INFO - 127.0.0.1 - - [22/May/2025 20:35:25] "POST /predict HTTP/1.1" 200 -
+2025-05-22 21:44:21,057 - __main__ - INFO - Received prediction request
+2025-05-22 21:44:21,058 - __main__ - INFO - Predicting for user 2, category Travel with 5 recent expenses
+2025-05-22 21:44:21,106 - __main__ - INFO - No saved model found, using statistical approach
+2025-05-22 21:44:21,127 - __main__ - INFO - Prediction complete in 0.07 seconds
+2025-05-22 21:44:21,130 - werkzeug - INFO - 127.0.0.1 - - [22/May/2025 21:44:21] "POST /predict HTTP/1.1" 200 -
+2025-05-23 01:18:05,702 - __main__ - INFO - Received prediction request
+2025-05-23 01:18:05,702 - __main__ - INFO - Predicting for user 2, category Travel with 5 recent expenses
+2025-05-23 01:18:05,744 - __main__ - INFO - No saved model found, using statistical approach
+2025-05-23 01:18:05,756 - __main__ - INFO - Prediction complete in 0.05 seconds
+2025-05-23 01:18:05,760 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 01:18:05] "POST /predict HTTP/1.1" 200 -
+2025-05-23 15:33:52,277 - __main__ - INFO - Received training request
+2025-05-23 15:33:52,277 - __main__ - INFO - Training model for user 2, category Dining with 3 expenses
+2025-05-23 15:33:52,317 - __main__ - INFO - Data loaded: (3, 2)
+2025-05-23 15:33:52,318 - __main__ - WARNING - Not enough data for ML model
+2025-05-23 15:33:52,320 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 15:33:52] "POST /train HTTP/1.1" 200 -
+2025-05-23 15:57:22,723 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-23 15:57:22,723 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-23 15:57:22,831 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.159.111:5000
+2025-05-23 15:57:22,831 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-23 15:57:30,163 - __main__ - INFO - Received training request
+2025-05-23 15:57:30,163 - __main__ - INFO - Training model for user 2, category Education with 5 expenses
+2025-05-23 15:57:30,174 - __main__ - INFO - Data loaded: (5, 2)
+2025-05-23 15:57:30,180 - __main__ - INFO - Extracting features
+2025-05-23 15:57:30,213 - __main__ - WARNING - Not enough data after feature engineering
+2025-05-23 15:57:30,215 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 15:57:30] "POST /train HTTP/1.1" 200 -
+2025-05-23 16:06:09,393 - __main__ - INFO - Received training request
+2025-05-23 16:06:09,393 - __main__ - INFO - Training model for user 2, category Dining with 7 expenses
+2025-05-23 16:06:09,404 - __main__ - INFO - Data loaded: (7, 2)
+2025-05-23 16:06:09,404 - __main__ - INFO - Extracting features
+2025-05-23 16:06:09,426 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 16:06:09,442 - __main__ - INFO - Training models
+2025-05-23 16:06:09,442 - __main__ - INFO - Using simple linear model due to limited data
+2025-05-23 16:06:09,469 - __main__ - INFO - Evaluating model
+2025-05-23 16:06:09,474 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Dining.joblib
+2025-05-23 16:06:09,484 - __main__ - INFO - Making prediction
+2025-05-23 16:06:09,484 - __main__ - INFO - Training complete in 0.09 seconds
+2025-05-23 16:06:09,484 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 16:06:09] "POST /train HTTP/1.1" 200 -
+2025-05-23 16:19:42,966 - __main__ - INFO - Received training request
+2025-05-23 16:19:42,966 - __main__ - INFO - Training model for user 2, category Travel with 13 expenses
+2025-05-23 16:19:42,971 - __main__ - INFO - Data loaded: (13, 2)
+2025-05-23 16:19:42,971 - __main__ - INFO - Extracting features
+2025-05-23 16:19:42,982 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 16:19:43,002 - __main__ - INFO - Training models
+2025-05-23 16:19:43,002 - __main__ - INFO - Trying linear model
+2025-05-23 16:19:43,012 - __main__ - INFO - linear model score: -22.34213207809122
+2025-05-23 16:19:43,012 - __main__ - INFO - Trying ridge model
+2025-05-23 16:19:43,024 - __main__ - INFO - ridge model score: -6.524065257540338
+2025-05-23 16:19:43,024 - __main__ - INFO - Trying gradient_boosting model
+2025-05-23 16:19:43,080 - __main__ - INFO - gradient_boosting model score: -45.30688419332404
+2025-05-23 16:19:43,080 - __main__ - WARNING - All models performed poorly, using robust linear model
+2025-05-23 16:19:43,086 - __main__ - INFO - Evaluating model
+2025-05-23 16:19:43,096 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Travel.joblib
+2025-05-23 16:19:43,103 - __main__ - INFO - Making prediction
+2025-05-23 16:19:43,103 - __main__ - WARNING - Prediction -15790.485552474962 seems unreasonable, adjusting
+2025-05-23 16:19:43,103 - __main__ - INFO - Adjusted prediction to 1073.7179487179487
+2025-05-23 16:19:43,103 - __main__ - INFO - Training complete in 0.14 seconds
+2025-05-23 16:19:43,111 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 16:19:43] "POST /train HTTP/1.1" 200 -
+2025-05-23 16:27:42,809 - __main__ - INFO - Received training request
+2025-05-23 16:27:42,809 - __main__ - INFO - Training model for user 2, category Education with 7 expenses
+2025-05-23 16:27:42,814 - __main__ - INFO - Data loaded: (7, 2)
+2025-05-23 16:27:42,814 - __main__ - INFO - Extracting features
+2025-05-23 16:27:42,832 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 16:27:42,832 - __main__ - INFO - Training models
+2025-05-23 16:27:42,833 - __main__ - INFO - Using simple linear model due to limited data
+2025-05-23 16:27:42,839 - __main__ - INFO - Evaluating model
+2025-05-23 16:27:42,844 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Education.joblib
+2025-05-23 16:27:42,849 - __main__ - INFO - Making prediction
+2025-05-23 16:27:42,854 - __main__ - INFO - Training complete in 0.05 seconds
+2025-05-23 16:27:42,855 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 16:27:42] "POST /train HTTP/1.1" 200 -
+2025-05-23 16:36:44,887 - __main__ - INFO - Received training request
+2025-05-23 16:36:44,887 - __main__ - INFO - Training model for user 2, category Healthcare with 6 expenses
+2025-05-23 16:36:44,889 - __main__ - INFO - Data loaded: (6, 2)
+2025-05-23 16:36:44,889 - __main__ - INFO - Extracting features
+2025-05-23 16:36:44,901 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 16:36:44,903 - __main__ - INFO - Training models
+2025-05-23 16:36:44,903 - __main__ - INFO - Using simple linear model due to limited data
+2025-05-23 16:36:44,909 - __main__ - INFO - Evaluating model
+2025-05-23 16:36:44,911 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Healthcare.joblib
+2025-05-23 16:36:44,920 - __main__ - INFO - Making prediction
+2025-05-23 16:36:44,925 - __main__ - INFO - Training complete in 0.04 seconds
+2025-05-23 16:36:44,926 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 16:36:44] "POST /train HTTP/1.1" 200 -
+2025-05-23 16:47:13,351 - __main__ - INFO - Received training request
+2025-05-23 16:47:13,351 - __main__ - INFO - Training model for user 2, category Dining with 7 expenses
+2025-05-23 16:47:13,358 - __main__ - INFO - Data loaded: (7, 2)
+2025-05-23 16:47:13,358 - __main__ - INFO - Extracting features
+2025-05-23 16:47:13,375 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 16:47:13,375 - __main__ - INFO - Training models
+2025-05-23 16:47:13,375 - __main__ - INFO - Using simple linear model due to limited data
+2025-05-23 16:47:13,384 - __main__ - INFO - Evaluating model
+2025-05-23 16:47:13,391 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Dining.joblib
+2025-05-23 16:47:13,401 - __main__ - INFO - Making prediction
+2025-05-23 16:47:13,401 - __main__ - INFO - Training complete in 0.05 seconds
+2025-05-23 16:47:13,401 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 16:47:13] "POST /train HTTP/1.1" 200 -
+2025-05-23 17:40:02,232 - __main__ - INFO - Received training request
+2025-05-23 17:40:02,232 - __main__ - INFO - Training model for user 2, category Healthcare with 14 expenses
+2025-05-23 17:40:02,240 - __main__ - INFO - Data loaded: (14, 2)
+2025-05-23 17:40:02,240 - __main__ - INFO - Extracting features
+2025-05-23 17:40:02,248 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 17:40:02,263 - __main__ - INFO - Training models
+2025-05-23 17:40:02,265 - __main__ - INFO - Trying linear model
+2025-05-23 17:40:02,275 - __main__ - INFO - linear model score: -7.938652692244865
+2025-05-23 17:40:02,275 - __main__ - INFO - Trying ridge model
+2025-05-23 17:40:02,281 - __main__ - INFO - ridge model score: -1.7332404006325248
+2025-05-23 17:40:02,281 - __main__ - INFO - Trying gradient_boosting model
+2025-05-23 17:40:02,338 - __main__ - INFO - gradient_boosting model score: -5.5207562128736685
+2025-05-23 17:40:02,339 - __main__ - WARNING - All models performed poorly, using robust linear model
+2025-05-23 17:40:02,352 - __main__ - INFO - Evaluating model
+2025-05-23 17:40:02,355 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Healthcare.joblib
+2025-05-23 17:40:02,366 - __main__ - INFO - Making prediction
+2025-05-23 17:40:02,366 - __main__ - INFO - Training complete in 0.13 seconds
+2025-05-23 17:40:02,371 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 17:40:02] "POST /train HTTP/1.1" 200 -
+2025-05-23 17:50:07,056 - __main__ - INFO - Received prediction request
+2025-05-23 17:50:07,056 - __main__ - INFO - Predicting for user 2, category Dining with 5 recent expenses
+2025-05-23 17:50:07,056 - __main__ - INFO - Loading saved model from D:\projects\Final-Expense\saved_models\model_2_Dining.joblib
+2025-05-23 17:50:07,153 - __main__ - INFO - Model loaded successfully
+2025-05-23 17:50:07,153 - __main__ - INFO - Using saved model for prediction
+D:\projects\Final-Expense\ml_service.py:362: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  df = df.fillna(method='bfill').fillna(method='ffill')
+2025-05-23 17:50:07,211 - __main__ - INFO - Using features for prediction: dict_keys([])
+2025-05-23 17:50:07,212 - __main__ - INFO - Making prediction with model
+C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-05-23 17:50:07,242 - __main__ - ERROR - Error in prediction: at least one array or dtype is required
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 418, in predict
+    prediction = model.predict(pred_df)[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\pipeline.py", line 603, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_set_output.py", line 313, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\preprocessing\_data.py", line 1043, in transform
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 882, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+2025-05-23 17:50:07,407 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 17:50:07] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-23 17:51:07,421 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-23 17:51:07,421 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-23 17:51:07,528 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.159.111:5000
+2025-05-23 17:51:07,529 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-23 17:51:13,137 - __main__ - INFO - Received training request
+2025-05-23 17:51:13,141 - __main__ - INFO - Training model for user 2, category Travel with 13 expenses
+2025-05-23 17:51:13,143 - __main__ - INFO - Data loaded: (13, 2)
+2025-05-23 17:51:13,143 - __main__ - INFO - Extracting features
+2025-05-23 17:51:13,170 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 17:51:13,177 - __main__ - INFO - Training models
+2025-05-23 17:51:13,177 - __main__ - INFO - Trying linear model
+2025-05-23 17:51:13,183 - __main__ - INFO - linear model score: 0.8982465874785888
+2025-05-23 17:51:13,183 - __main__ - INFO - Trying ridge model
+2025-05-23 17:51:13,200 - __main__ - INFO - ridge model score: -0.6092534281884343
+2025-05-23 17:51:13,200 - __main__ - INFO - Trying gradient_boosting model
+2025-05-23 17:51:13,249 - __main__ - INFO - gradient_boosting model score: -0.6517312538500033
+2025-05-23 17:51:13,249 - __main__ - INFO - Evaluating model
+2025-05-23 17:51:13,258 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Travel.joblib
+2025-05-23 17:51:13,261 - __main__ - INFO - Making prediction
+2025-05-23 17:51:13,267 - __main__ - INFO - Training complete in 0.13 seconds
+2025-05-23 17:51:13,270 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 17:51:13] "POST /train HTTP/1.1" 200 -
+2025-05-23 17:52:30,204 - __main__ - INFO - Received prediction request
+2025-05-23 17:52:30,204 - __main__ - INFO - Predicting for user 2, category Dining with 5 recent expenses
+2025-05-23 17:52:30,204 - __main__ - INFO - Loading saved model from D:\projects\Final-Expense\saved_models\model_2_Dining.joblib
+2025-05-23 17:52:30,213 - __main__ - INFO - Model loaded successfully
+2025-05-23 17:52:30,216 - __main__ - INFO - Using saved model for prediction
+D:\projects\Final-Expense\ml_service.py:362: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  df = df.fillna(method='bfill').fillna(method='ffill')
+2025-05-23 17:52:30,231 - __main__ - INFO - Using features for prediction: dict_keys([])
+2025-05-23 17:52:30,232 - __main__ - INFO - Making prediction with model
+C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-05-23 17:52:30,235 - __main__ - ERROR - Error in prediction: at least one array or dtype is required
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 418, in predict
+    prediction = model.predict(pred_df)[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\pipeline.py", line 603, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_set_output.py", line 313, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\preprocessing\_data.py", line 1043, in transform
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 882, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+2025-05-23 17:52:30,243 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 17:52:30] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-23 22:35:00,903 - __main__ - INFO - Received prediction request
+2025-05-23 22:35:00,907 - __main__ - INFO - Predicting for user 2, category Dining with 5 recent expenses
+2025-05-23 22:35:00,907 - __main__ - INFO - Loading saved model from D:\projects\Final-Expense\saved_models\model_2_Dining.joblib
+2025-05-23 22:35:00,924 - __main__ - INFO - Model loaded successfully
+2025-05-23 22:35:00,957 - __main__ - INFO - Using saved model for prediction
+D:\projects\Final-Expense\ml_service.py:362: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  df = df.fillna(method='bfill').fillna(method='ffill')
+2025-05-23 22:35:00,990 - __main__ - INFO - Using features for prediction: dict_keys([])
+2025-05-23 22:35:00,990 - __main__ - INFO - Making prediction with model
+C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-05-23 22:35:00,998 - __main__ - ERROR - Error in prediction: at least one array or dtype is required
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 418, in predict
+    prediction = model.predict(pred_df)[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\pipeline.py", line 603, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_set_output.py", line 313, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\preprocessing\_data.py", line 1043, in transform
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 882, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+2025-05-23 22:35:01,010 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 22:35:01] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-23 22:37:38,440 - __main__ - INFO - Received training request
+2025-05-23 22:37:38,440 - __main__ - INFO - Training model for user 2, category Dining with 7 expenses
+2025-05-23 22:37:38,454 - __main__ - INFO - Data loaded: (7, 2)
+2025-05-23 22:37:38,455 - __main__ - INFO - Extracting features
+2025-05-23 22:37:38,489 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 22:37:38,489 - __main__ - INFO - Training models
+2025-05-23 22:37:38,489 - __main__ - INFO - Using simple linear model due to limited data
+2025-05-23 22:37:38,532 - __main__ - INFO - Evaluating model
+2025-05-23 22:37:38,544 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Dining.joblib
+2025-05-23 22:37:38,556 - __main__ - INFO - Making prediction
+2025-05-23 22:37:38,556 - __main__ - INFO - Training complete in 0.12 seconds
+2025-05-23 22:37:38,559 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 22:37:38] "POST /train HTTP/1.1" 200 -
+2025-05-23 22:37:44,973 - __main__ - INFO - Received prediction request
+2025-05-23 22:37:44,973 - __main__ - INFO - Predicting for user 2, category Travel with 5 recent expenses
+2025-05-23 22:37:44,973 - __main__ - INFO - Loading saved model from D:\projects\Final-Expense\saved_models\model_2_Travel.joblib
+2025-05-23 22:37:45,005 - __main__ - INFO - Model loaded successfully
+2025-05-23 22:37:45,014 - __main__ - INFO - Using saved model for prediction
+D:\projects\Final-Expense\ml_service.py:362: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  df = df.fillna(method='bfill').fillna(method='ffill')
+2025-05-23 22:37:45,025 - __main__ - INFO - Using features for prediction: dict_keys([])
+2025-05-23 22:37:45,029 - __main__ - INFO - Making prediction with model
+C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-05-23 22:37:45,031 - __main__ - ERROR - Error in prediction: at least one array or dtype is required
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 418, in predict
+    prediction = model.predict(pred_df)[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\pipeline.py", line 603, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_set_output.py", line 313, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\preprocessing\_data.py", line 1043, in transform
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 882, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+2025-05-23 22:37:45,032 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 22:37:45] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-23 22:38:19,976 - __main__ - INFO - Received prediction request
+2025-05-23 22:38:19,976 - __main__ - INFO - Predicting for user 2, category Healthcare with 5 recent expenses
+2025-05-23 22:38:19,976 - __main__ - INFO - Loading saved model from D:\projects\Final-Expense\saved_models\model_2_Healthcare.joblib
+2025-05-23 22:38:20,001 - __main__ - INFO - Model loaded successfully
+2025-05-23 22:38:20,001 - __main__ - INFO - Using saved model for prediction
+D:\projects\Final-Expense\ml_service.py:362: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  df = df.fillna(method='bfill').fillna(method='ffill')
+2025-05-23 22:38:20,017 - __main__ - INFO - Using features for prediction: dict_keys([])
+2025-05-23 22:38:20,017 - __main__ - INFO - Making prediction with model
+C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-05-23 22:38:20,017 - __main__ - ERROR - Error in prediction: at least one array or dtype is required
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 418, in predict
+    prediction = model.predict(pred_df)[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\pipeline.py", line 603, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_set_output.py", line 313, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\preprocessing\_data.py", line 1043, in transform
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 882, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+2025-05-23 22:38:20,017 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 22:38:20] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-23 22:39:01,488 - __main__ - INFO - Received training request
+2025-05-23 22:39:01,488 - __main__ - INFO - Training model for user 2, category Education with 7 expenses
+2025-05-23 22:39:01,493 - __main__ - INFO - Data loaded: (7, 2)
+2025-05-23 22:39:01,493 - __main__ - INFO - Extracting features
+2025-05-23 22:39:01,509 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 22:39:01,509 - __main__ - INFO - Training models
+2025-05-23 22:39:01,509 - __main__ - INFO - Using simple linear model due to limited data
+2025-05-23 22:39:01,517 - __main__ - INFO - Evaluating model
+2025-05-23 22:39:01,529 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Education.joblib
+2025-05-23 22:39:01,534 - __main__ - INFO - Making prediction
+2025-05-23 22:39:01,542 - __main__ - INFO - Training complete in 0.05 seconds
+2025-05-23 22:39:01,542 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 22:39:01] "POST /train HTTP/1.1" 200 -
+2025-05-23 22:39:11,354 - __main__ - INFO - Received training request
+2025-05-23 22:39:11,355 - __main__ - INFO - Training model for user 2, category Healthcare with 14 expenses
+2025-05-23 22:39:11,358 - __main__ - INFO - Data loaded: (14, 2)
+2025-05-23 22:39:11,358 - __main__ - INFO - Extracting features
+2025-05-23 22:39:11,374 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 22:39:11,384 - __main__ - INFO - Training models
+2025-05-23 22:39:11,387 - __main__ - INFO - Trying linear model
+2025-05-23 22:39:11,396 - __main__ - INFO - linear model score: -7.938652692244865
+2025-05-23 22:39:11,396 - __main__ - INFO - Trying ridge model
+2025-05-23 22:39:11,410 - __main__ - INFO - ridge model score: -1.7332404006325248
+2025-05-23 22:39:11,410 - __main__ - INFO - Trying gradient_boosting model
+2025-05-23 22:39:11,459 - __main__ - INFO - gradient_boosting model score: -5.571600137488002
+2025-05-23 22:39:11,467 - __main__ - WARNING - All models performed poorly, using robust linear model
+2025-05-23 22:39:11,473 - __main__ - INFO - Evaluating model
+2025-05-23 22:39:11,476 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Healthcare.joblib
+2025-05-23 22:39:11,489 - __main__ - INFO - Making prediction
+2025-05-23 22:39:11,492 - __main__ - INFO - Training complete in 0.14 seconds
+2025-05-23 22:39:11,492 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 22:39:11] "POST /train HTTP/1.1" 200 -
+2025-05-23 22:39:25,737 - __main__ - INFO - Received training request
+2025-05-23 22:39:25,737 - __main__ - INFO - Training model for user 2, category Travel with 13 expenses
+2025-05-23 22:39:25,740 - __main__ - INFO - Data loaded: (13, 2)
+2025-05-23 22:39:25,740 - __main__ - INFO - Extracting features
+2025-05-23 22:39:25,753 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 22:39:25,760 - __main__ - INFO - Training models
+2025-05-23 22:39:25,760 - __main__ - INFO - Trying linear model
+2025-05-23 22:39:25,771 - __main__ - INFO - linear model score: 0.8982465874785888
+2025-05-23 22:39:25,771 - __main__ - INFO - Trying ridge model
+2025-05-23 22:39:25,779 - __main__ - INFO - ridge model score: -0.6092534281884343
+2025-05-23 22:39:25,779 - __main__ - INFO - Trying gradient_boosting model
+2025-05-23 22:39:25,830 - __main__ - INFO - gradient_boosting model score: -0.6605202742208609
+2025-05-23 22:39:25,830 - __main__ - INFO - Evaluating model
+2025-05-23 22:39:25,837 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Travel.joblib
+2025-05-23 22:39:25,847 - __main__ - INFO - Making prediction
+2025-05-23 22:39:25,850 - __main__ - INFO - Training complete in 0.11 seconds
+2025-05-23 22:39:25,852 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 22:39:25] "POST /train HTTP/1.1" 200 -
+2025-05-23 23:09:06,091 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-23 23:09:06,091 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-23 23:09:06,118 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.159.111:5000
+2025-05-23 23:09:06,118 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-23 23:09:32,032 - __main__ - INFO - Received training request
+2025-05-23 23:09:32,033 - __main__ - INFO - Training model for user 2, category Dining with 7 expenses
+2025-05-23 23:09:32,036 - __main__ - INFO - Data loaded: (7, 2)
+2025-05-23 23:09:32,036 - __main__ - INFO - Extracting features
+2025-05-23 23:09:32,043 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-23 23:09:32,043 - __main__ - INFO - Training models
+2025-05-23 23:09:32,043 - __main__ - INFO - Using simple linear model due to limited data
+2025-05-23 23:09:32,050 - __main__ - INFO - Evaluating model
+2025-05-23 23:09:32,052 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_2_Dining.joblib
+2025-05-23 23:09:32,055 - __main__ - INFO - Making prediction
+2025-05-23 23:09:32,057 - __main__ - INFO - Training complete in 0.03 seconds
+2025-05-23 23:09:32,057 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 23:09:32] "POST /train HTTP/1.1" 200 -
+2025-05-23 23:09:36,049 - __main__ - INFO - Received prediction request
+2025-05-23 23:09:36,049 - __main__ - INFO - Predicting for user 2, category Travel with 5 recent expenses
+2025-05-23 23:09:36,049 - __main__ - INFO - Loading saved model from D:\projects\Final-Expense\saved_models\model_2_Travel.joblib
+2025-05-23 23:09:36,059 - __main__ - INFO - Model loaded successfully
+2025-05-23 23:09:36,061 - __main__ - INFO - Using saved model for prediction
+D:\projects\Final-Expense\ml_service.py:361: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  df = df.fillna(method='bfill').fillna(method='ffill')
+2025-05-23 23:09:36,068 - __main__ - INFO - Using features for prediction: dict_keys([])
+2025-05-23 23:09:36,068 - __main__ - INFO - Making prediction with model
+C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-05-23 23:09:36,070 - __main__ - ERROR - Error in prediction: at least one array or dtype is required
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 417, in predict
+    prediction = model.predict(pred_df)[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\pipeline.py", line 603, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_set_output.py", line 313, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\preprocessing\_data.py", line 1043, in transform
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 882, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+2025-05-23 23:09:36,073 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 23:09:36] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-23 23:09:44,198 - __main__ - INFO - Received prediction request
+2025-05-23 23:09:44,198 - __main__ - INFO - Predicting for user 2, category Healthcare with 5 recent expenses
+2025-05-23 23:09:44,199 - __main__ - INFO - Loading saved model from D:\projects\Final-Expense\saved_models\model_2_Healthcare.joblib
+2025-05-23 23:09:44,207 - __main__ - INFO - Model loaded successfully
+2025-05-23 23:09:44,208 - __main__ - INFO - Using saved model for prediction
+D:\projects\Final-Expense\ml_service.py:361: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  df = df.fillna(method='bfill').fillna(method='ffill')
+2025-05-23 23:09:44,214 - __main__ - INFO - Using features for prediction: dict_keys([])
+2025-05-23 23:09:44,214 - __main__ - INFO - Making prediction with model
+C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-05-23 23:09:44,214 - __main__ - ERROR - Error in prediction: at least one array or dtype is required
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 417, in predict
+    prediction = model.predict(pred_df)[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\pipeline.py", line 603, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_set_output.py", line 313, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\preprocessing\_data.py", line 1043, in transform
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 882, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+2025-05-23 23:09:44,216 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 23:09:44] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-23 23:09:57,639 - __main__ - INFO - Received prediction request
+2025-05-23 23:09:57,639 - __main__ - INFO - Predicting for user 2, category Education with 5 recent expenses
+2025-05-23 23:09:57,639 - __main__ - INFO - Loading saved model from D:\projects\Final-Expense\saved_models\model_2_Education.joblib
+2025-05-23 23:09:57,649 - __main__ - INFO - Model loaded successfully
+2025-05-23 23:09:57,651 - __main__ - INFO - Using saved model for prediction
+D:\projects\Final-Expense\ml_service.py:361: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  df = df.fillna(method='bfill').fillna(method='ffill')
+2025-05-23 23:09:57,654 - __main__ - INFO - Using features for prediction: dict_keys([])
+2025-05-23 23:09:57,655 - __main__ - INFO - Making prediction with model
+C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-05-23 23:09:57,655 - __main__ - ERROR - Error in prediction: at least one array or dtype is required
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 417, in predict
+    prediction = model.predict(pred_df)[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\pipeline.py", line 603, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_set_output.py", line 313, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\preprocessing\_data.py", line 1043, in transform
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 882, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+2025-05-23 23:09:57,656 - werkzeug - INFO - 127.0.0.1 - - [23/May/2025 23:09:57] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-24 11:06:48,815 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-24 11:06:48,815 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-24 11:06:48,924 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.159.111:5000
+2025-05-24 11:06:48,924 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-24 11:24:00,602 - __main__ - INFO - Received training request
+2025-05-24 11:24:00,602 - __main__ - INFO - Training model for user 3, category Dining with 6 expenses
+2025-05-24 11:24:00,610 - __main__ - INFO - Data loaded: (6, 2)
+2025-05-24 11:24:00,610 - __main__ - INFO - Extracting features
+2025-05-24 11:24:00,629 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-24 11:24:00,629 - __main__ - INFO - Training models
+2025-05-24 11:24:00,629 - __main__ - INFO - Using simple linear model due to limited data
+2025-05-24 11:24:00,646 - __main__ - INFO - Evaluating model
+2025-05-24 11:24:00,654 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_3_Dining.joblib
+2025-05-24 11:24:00,661 - __main__ - INFO - Making prediction
+2025-05-24 11:24:00,663 - __main__ - INFO - Training complete in 0.07 seconds
+2025-05-24 11:24:00,663 - werkzeug - INFO - 127.0.0.1 - - [24/May/2025 11:24:00] "POST /train HTTP/1.1" 200 -
+2025-05-24 11:57:11,266 - __main__ - INFO - Received prediction request
+2025-05-24 11:57:11,266 - __main__ - INFO - Predicting for user 3, category Dining with 5 recent expenses
+2025-05-24 11:57:11,266 - __main__ - INFO - Loading saved model from D:\projects\Final-Expense\saved_models\model_3_Dining.joblib
+2025-05-24 11:57:11,306 - __main__ - INFO - Model loaded successfully
+2025-05-24 11:57:11,312 - __main__ - INFO - Using saved model for prediction
+D:\projects\Final-Expense\ml_service.py:361: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  df = df.fillna(method='bfill').fillna(method='ffill')
+2025-05-24 11:57:11,328 - __main__ - INFO - Using features for prediction: dict_keys([])
+2025-05-24 11:57:11,328 - __main__ - INFO - Making prediction with model
+C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-05-24 11:57:11,366 - __main__ - ERROR - Error in prediction: at least one array or dtype is required
+Traceback (most recent call last):
+  File "D:\projects\Final-Expense\ml_service.py", line 417, in predict
+    prediction = model.predict(pred_df)[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\pipeline.py", line 603, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_set_output.py", line 313, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\preprocessing\_data.py", line 1043, in transform
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 882, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+2025-05-24 11:57:11,507 - werkzeug - INFO - 127.0.0.1 - - [24/May/2025 11:57:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-24 11:57:39,509 - __main__ - INFO - Received training request
+2025-05-24 11:57:39,509 - __main__ - INFO - Training model for user 3, category Dining with 6 expenses
+2025-05-24 11:57:39,513 - __main__ - INFO - Data loaded: (6, 2)
+2025-05-24 11:57:39,513 - __main__ - INFO - Extracting features
+2025-05-24 11:57:39,524 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-05-24 11:57:39,524 - __main__ - INFO - Training models
+2025-05-24 11:57:39,524 - __main__ - INFO - Using simple linear model due to limited data
+2025-05-24 11:57:39,532 - __main__ - INFO - Evaluating model
+2025-05-24 11:57:39,539 - __main__ - INFO - Saving model to D:\projects\Final-Expense\saved_models\model_3_Dining.joblib
+2025-05-24 11:57:39,544 - __main__ - INFO - Making prediction
+2025-05-24 11:57:39,547 - __main__ - INFO - Training complete in 0.04 seconds
+2025-05-24 11:57:39,549 - werkzeug - INFO - 127.0.0.1 - - [24/May/2025 11:57:39] "POST /train HTTP/1.1" 200 -
+2025-06-04 10:26:19,398 - __main__ - INFO - Pre-loading scikit-learn models
+2025-06-04 10:26:19,398 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-06-04 10:26:19,449 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.81.111:5000
+2025-06-04 10:26:19,449 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-04 10:27:36,992 - __main__ - INFO - Pre-loading scikit-learn models
+2025-06-04 10:27:36,992 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-06-04 10:27:37,019 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.81.111:5000
+2025-06-04 10:27:37,019 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-06-04 10:28:11,994 - __main__ - INFO - Received prediction request
+2025-06-04 10:28:11,994 - __main__ - INFO - Predicting for user 3, category Dining with 5 recent expenses
+2025-06-04 10:28:11,995 - __main__ - INFO - Loading saved model from D:\projects\Expensify - Finance Tracker\saved_models\model_3_Dining.joblib
+2025-06-04 10:28:12,000 - __main__ - INFO - Model loaded successfully
+2025-06-04 10:28:12,016 - __main__ - INFO - Using saved model for prediction
+D:\projects\Expensify - Finance Tracker\ml_service.py:361: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.
+  df = df.fillna(method='bfill').fillna(method='ffill')
+2025-06-04 10:28:12,034 - __main__ - INFO - Using features for prediction: dict_keys([])
+2025-06-04 10:28:12,034 - __main__ - INFO - Making prediction with model
+C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py:493: UserWarning: X does not have valid feature names, but StandardScaler was fitted with feature names
+  warnings.warn(
+2025-06-04 10:28:12,051 - __main__ - ERROR - Error in prediction: at least one array or dtype is required
+Traceback (most recent call last):
+  File "D:\projects\Expensify - Finance Tracker\ml_service.py", line 417, in predict
+    prediction = model.predict(pred_df)[0]
+                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\pipeline.py", line 603, in predict
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_set_output.py", line 313, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\preprocessing\_data.py", line 1043, in transform
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 882, in check_array
+    dtype_orig = np.result_type(*dtypes_orig)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: at least one array or dtype is required
+2025-06-04 10:28:12,116 - werkzeug - INFO - 127.0.0.1 - - [04/Jun/2025 10:28:12] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-06-04 10:31:52,648 - __main__ - INFO - Received training request
+2025-06-04 10:31:52,648 - __main__ - INFO - Training model for user 3, category Dining with 6 expenses
+2025-06-04 10:31:52,650 - __main__ - INFO - Data loaded: (6, 2)
+2025-06-04 10:31:52,650 - __main__ - INFO - Extracting features
+2025-06-04 10:31:52,660 - __main__ - INFO - Using features: ['month', 'day_of_month', 'is_weekend', 'days_since_first', 'seq', 'trend', 'prev_amount', 'rolling_mean_3']
+2025-06-04 10:31:52,673 - __main__ - INFO - Training models
+2025-06-04 10:31:52,673 - __main__ - INFO - Using simple linear model due to limited data
+2025-06-04 10:31:52,683 - __main__ - INFO - Evaluating model
+2025-06-04 10:31:52,687 - __main__ - INFO - Saving model to D:\projects\Expensify - Finance Tracker\saved_models\model_3_Dining.joblib
+2025-06-04 10:31:52,690 - __main__ - INFO - Making prediction
+2025-06-04 10:31:52,691 - __main__ - INFO - Training complete in 0.04 seconds
+2025-06-04 10:31:52,691 - werkzeug - INFO - 127.0.0.1 - - [04/Jun/2025 10:31:52] "POST /train HTTP/1.1" 200 -
+2025-06-04 11:45:16,931 - __main__ - INFO - Pre-loading scikit-learn models
+2025-06-04 11:45:16,931 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-06-04 11:45:16,968 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.81.111:5000
+2025-06-04 11:45:16,968 - werkzeug - INFO - [33mPress CTRL+C to quit[0m

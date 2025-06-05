@@ -1,0 +1,19 @@
+2025-05-11 22:13:03,628 - __main__ - INFO - Pre-loading scikit-learn models
+2025-05-11 22:13:03,629 - __main__ - INFO - Starting Flask server
+ * Serving Flask app 'ml_service'
+ * Debug mode: off
+2025-05-11 22:13:03,709 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.88:5000
+2025-05-11 22:13:03,710 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-11 22:13:19,843 - __main__ - INFO - Received prediction request
+2025-05-11 22:13:19,845 - __main__ - INFO - Predicting for user 3, category Dining with 5 recent expenses
+2025-05-11 22:13:19,867 - __main__ - INFO - No saved model found, using statistical approach
+2025-05-11 22:13:19,887 - __main__ - INFO - Prediction complete in 0.04 seconds
+2025-05-11 22:13:19,892 - werkzeug - INFO - 127.0.0.1 - - [11/May/2025 22:13:19] "POST /predict HTTP/1.1" 200 -
+2025-05-11 22:13:49,392 - __main__ - INFO - Received prediction request
+2025-05-11 22:13:49,392 - __main__ - INFO - Predicting for user 3, category Dining with 5 recent expenses
+2025-05-11 22:13:49,396 - __main__ - INFO - No saved model found, using statistical approach
+2025-05-11 22:13:49,398 - __main__ - INFO - Prediction complete in 0.01 seconds
+2025-05-11 22:13:49,398 - werkzeug - INFO - 127.0.0.1 - - [11/May/2025 22:13:49] "POST /predict HTTP/1.1" 200 -

@@ -1,0 +1,247 @@
+/* Styles for the prediction page */
+
+.prediction-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.form-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-control select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.predict-btn {
+  background-color: #9c27b0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.predict-btn:hover {
+  background-color: #7b1fa2;
+}
+
+.predict-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.results-section {
+  padding: 20px 0;
+}
+
+.result-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.result-header {
+  margin-bottom: 15px;
+}
+
+.result-amount {
+  font-size: 42px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 20px 0;
+}
+
+.result-details {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Model info styles */
+.model-info {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #ddd;
+  text-align: left;
+}
+
+.model-detail {
+  margin: 8px 0;
+  display: flex;
+  align-items: baseline;
+}
+
+.model-label {
+  font-weight: bold;
+  min-width: 120px;
+  display: inline-block;
+  color: #555;
+}
+
+#model-type {
+  color: #9c27b0;
+  font-weight: 500;
+}
+
+#model-features {
+  color: #2196F3;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+
+
+#processing-time {
+  color: #FF9800;
+  font-weight: 500;
+}
+
+#history-section {
+  margin-top: 30px;
+}
+
+#history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#history-table th,
+#history-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#history-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Spinner for loading state */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #007bff;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error message styling */
+#error-message {
+  background-color: #ffebee;
+  color: #b71c1c;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+/* ML Service status indicator */
+#status-message {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.status-checking {
+  background-color: #FFF59D;
+  color: #F57F17;
+}
+
+.status-online {
+  background-color: #C8E6C9;
+  color: #2E7D32;
+}
+
+.status-offline {
+  background-color: #FFCDD2;
+  color: #C62828;
+}
+
+/* Cache indicator */
+.cache-indicator {
+  background-color: #E1F5FE;
+  color: #0277BD;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin: 0 0 10px 0;
+  display: inline-block;
+}
+
+.cache-icon {
+  color: #FFC107;
+  font-size: 14px;
+}
+
+/* Loading message */
+#loading-message {
+  margin: 20px 0;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .prediction-container {
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .result-amount {
+    font-size: 32px;
+  }
+
+  .model-detail {
+    flex-direction: column;
+  }
+
+  .model-label {
+    margin-bottom: 3px;
+  }
+
+  #status-message {
+    display: block;
+    margin: 5px 0 0 0;
+  }
+}

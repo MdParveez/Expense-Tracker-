@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Expense Predictions - Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <link rel="stylesheet" href="prediction.css" />
+    <!-- Authentication check -->
+    <script>
+      // Check if user is logged in
+      if (!localStorage.getItem("token")) {
+        window.location.href = "login.html";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header-container">
+      <h1>Expense Predictions</h1>
+      <span id="status-message" class="status-checking">Checking ML Service...</span>
+      <!-- Hamburger Menu Button (only visible on mobile) -->
+      <button class="hamburger-btn" id="menu-btn">☰</button>
+      <!-- Desktop Logout Button (hidden on mobile) -->
+      <button id="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Side Menu (for mobile) -->
+    <div class="side-menu" id="side-menu">
+      <a href="index.html" class="menu-item">🏠 Dashboard</a>
+      <a href="add-expense.html" class="menu-item">➕ Add Expense</a>
+      <a href="expenses-list.html" class="menu-item">📋 View Expenses</a>
+      <a href="expense-chart.html" class="menu-item">📊 Expense Chart</a>
+      <a href="bills.html" class="menu-item">📅 View Bills</a>
+      <button class="menu-item" onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Prediction Form -->
+    <div class="prediction-container">
+      <div class="form-section">
+        <h2>Generate Expense Prediction</h2>
+        <p>Our AI system uses machine learning to predict your future expenses based on past spending patterns.</p>
+        <div class="form-control">
+          <label for="category-select">Select Category:</label>
+          <select id="category-select">
+            <option value="">Select a category</option>
+            <!-- Categories will be loaded dynamically -->
+          </select>
+        </div>
+        <button id="predict-btn" class="predict-btn">Generate Prediction</button>
+      </div>
+
+      <!-- Prediction Results -->
+      <div id="prediction-results" class="results-section" style="display: none;">
+        <h2>Prediction Results</h2>
+        <div id="loading-spinner" class="spinner" style="display: none;"></div>
+        <div id="loading-message" style="text-align: center; display: none;">
+          Processing your data...
+        </div>
+        <div id="result-content">
+          <div class="result-card">
+            <div class="result-header">
+              <h3>For Category: <span id="result-category"></span></h3>
+              <p>Predicted amount for <span id="result-month"></span>:</p>
+            </div>
+            <div class="result-amount">₹<span id="result-value"></span></div>
+            <div id="cache-indicator" style="display: none;" class="cache-indicator">
+              <span class="cache-icon">⚡</span> Cached result from <span id="cache-age">a few moments ago</span>
+            </div>
+            <div class="result-details">
+              <p>Confidence: <span id="result-confidence"></span>%</p>
+              <div class="model-info">
+                <div class="model-detail">
+                  <span class="model-label">Model Type:</span>
+                  <span id="model-type">Statistical Model</span>
+                </div>
+                <div class="model-detail">
+                  <span class="model-label">Features Used:</span>
+                  <span id="model-features">amount, date</span>
+                </div>
+
+                <div class="model-detail">
+                  <span class="model-label">Processing Time:</span>
+                  <span id="processing-time">-</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="history-section">
+            <h3>Recent Expenses in this Category</h3>
+            <table id="history-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody id="history-body">
+                <!-- Recent expenses will be loaded here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div id="error-message" style="display: none; color: red;"></div>
+      </div>
+    </div>
+
+    <!-- Footer Section with Greeting -->
+    <div
+      id="footer-section"
+      style="text-align: center; margin-top: 40px"
+    >
+      <h1 id="greeting"></h1>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div
+      style="
+        text-align: center;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      "
+    >
+      <a href="index.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          🏠 Dashboard
+        </button>
+      </a>
+      <a href="add-expense.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          ➕ Add Expense
+        </button>
+      </a>
+      <a href="expenses-list.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          📋 View Expenses
+        </button>
+      </a>
+      <a href="expense-chart.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          📊 Expense Chart
+        </button>
+      </a>
+      <a href="bills.html">
+        <button style="padding: 10px 20px; font-size: 16px">
+          📅 View Bills
+        </button>
+      </a>
+    </div>
+
+    <!-- Load the script -->
+    <script src="prediction.js"></script>
+  </body>
+</html>

@@ -1,0 +1,485 @@
+/* Apply box-sizing to all elements for consistent sizing */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Header container with improved button layout */
+.header-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* Add padding-right to make room for the logout button */
+    padding-right: 100px;
+}
+
+/* Title in header */
+.header-container h1 {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+form input,
+form select,
+form button {
+    padding: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form input,
+form select {
+    flex: 1 1 45%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+form button {
+    flex: 1 1 100%;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #34495e;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto 2rem auto;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+#expense-table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+    word-break: break-word;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+td button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#expense-chart {
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Filter controls */
+.search-filter-container {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer income section */
+.footer-income-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Navigation buttons container */
+.nav-buttons-container {
+    text-align: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Navigation button style */
+.nav-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
+
+#search,
+#category-filter {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 auto 10px auto;
+    min-width: 200px;
+    max-width: 300px;
+    display: block;
+}
+
+#search:focus,
+#category-filter:focus {
+    outline: none;
+    border-color: #2c3e50;
+    box-shadow: 0 0 5px rgba(44, 62, 80, 0.5);
+}
+
+@media (max-width: 600px) {
+
+    #search,
+    #category-filter {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Header buttons styling */
+.header-container button {
+    margin: 5px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+/* Logout button */
+#logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#logout-btn:hover {
+    background-color: #e60000;
+}
+
+/* Notification buttons */
+#notification-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+#notification-btn:hover {
+    background-color: #388e3c;
+}
+
+/* Test notification buttons */
+button[onclick*="forceNotification"] {
+    background-color: #2196f3;
+    color: white;
+}
+
+button[onclick*="forceNotification"]:hover {
+    background-color: #0b7dda;
+}
+
+/* Dynamically added buttons styling */
+.header-container button:nth-of-type(n+3) {
+    background-color: #2196f3;
+    color: white;
+}
+
+.header-container button:nth-of-type(n+3):hover {
+    background-color: #0b7dda;
+}
+
+/* Clear cache button */
+button[onclick*="clearCache"],
+.cache-btn {
+    background-color: #ff9800;
+    color: white;
+}
+
+button[onclick*="clearCache"]:hover,
+.cache-btn:hover {
+    background-color: #e68a00;
+}
+
+/* 💡 Edit Income Button Style */
+#edit-income-btn {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#edit-income-btn:hover {
+    background-color: #388e3c;
+}
+
+/* 📦 Modal Styling */
+#edit-income-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    width: 300px;
+    text-align: center;
+}
+
+#edit-income-modal h3 {
+    margin-bottom: 15px;
+}
+
+#edit-income-modal input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#edit-income-modal button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#save-income-btn {
+    background-color: #2196f3;
+    color: white;
+}
+
+#save-income-btn:hover {
+    background-color: #1976d2;
+}
+
+#edit-income-modal button:not(#save-income-btn) {
+    background-color: #e0e0e0;
+}
+
+#edit-income-modal button:not(#save-income-btn):hover {
+    background-color: #bdbdbd;
+}
+
+select#category,
+select#category-filter {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select#category:focus,
+select#category-filter:focus {
+    outline: none;
+    border-color: #4caf50;
+    background-color: #fff;
+}
+
+/* Common Modal Styles */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 25px 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    font-family: Arial, sans-serif;
+}
+
+.modal-hidden {
+    display: none !important;
+}
+
+.modal h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal input,
+.modal select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal button {
+    padding: 10px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.modal button:hover {
+    background-color: #0056b3;
+}
+
+.modal button:last-child {
+    background-color: #ccc;
+    color: black;
+}
+
+.modal button:last-child:hover {
+    background-color: #aaa;
+}
+
+/* Hide any sidebar indicators that might be visible */
+.side-menu::before,
+.side-menu::after {
+    display: none !important;
+}
+
+/* Ensure no part of the side menu is visible when closed */
+.side-menu:not(.open) {
+    right: -100% !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.predict-btn {
+    background-color: #9c27b0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.predict-btn:hover {
+    background-color: #7b1fa2;
+}
+
+/* Modal content styles */
+.modal-content {
+    padding: 20px;
+}
+
+/* Spinner for loading state */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #007bff;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

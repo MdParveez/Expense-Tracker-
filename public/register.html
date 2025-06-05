@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Register - Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="auth-header">
+        <h1>Create Account</h1>
+      </div>
+
+      <div id="auth-error" class="auth-error"></div>
+      <div id="auth-success" class="auth-success"></div>
+
+      <form id="register-form" class="auth-form">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="phone" placeholder="Phone Number" required />
+        <input
+          type="number"
+          id="income"
+          placeholder="Monthly Income"
+          required
+        />
+        <div class="password-container">
+          <input
+            type="password"
+            id="password"
+            class="password-field"
+            placeholder="Password"
+            required
+          />
+          <span
+            class="password-toggle"
+            onclick="togglePasswordVisibility('password')"
+          >
+            <i class="fa-solid fa-eye"></i>
+          </span>
+        </div>
+        <div class="password-container">
+          <input
+            type="password"
+            id="confirmPassword"
+            class="password-field"
+            placeholder="Confirm Password"
+            required
+          />
+          <span
+            class="password-toggle"
+            onclick="togglePasswordVisibility('confirmPassword')"
+          >
+            <i class="fa-solid fa-eye"></i>
+          </span>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+
+      <div class="auth-footer">
+        Already have an account? <a href="login.html">Login</a>
+      </div>
+    </div>
+
+    <script>
+      const registerForm = document.getElementById("register-form");
+      const errorDiv = document.getElementById("auth-error");
+      const successDiv = document.getElementById("auth-success");
+
+      registerForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        // Get form values
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const income = document.getElementById("income").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirmPassword").value;
+
+        // Simple validation
+        if (
+          !name ||
+          !email ||
+          !phone ||
+          !income ||
+          !password ||
+          !confirmPassword
+        ) {
+          showError("Please fill in all fields");
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          showError("Passwords don't match!");
+          return;
+        }
+
+        if (password.length < 6) {
+          showError("Password must be at least 6 characters long");
+          return;
+        }
+
+        // Show loading state
+        const submitBtn = registerForm.querySelector("button[type='submit']");
+        submitBtn.textContent = "Registering...";
+        submitBtn.disabled = true;
+
+        try {
+          // Send registration request to API
+          const response = await fetch("/api/auth/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name,
+              email,
+              phone,
+              income,
+              password,
+              confirmPassword,
+            }),
+          });
+
+          if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(errorText || "Registration failed");
+          }
+
+          // Show success message
+          showSuccess("Registration successful! Redirecting to login page...");
+
+          // Redirect to login page after 2 seconds
+          setTimeout(() => {
+            window.location.href = "login.html";
+          }, 2000);
+        } catch (err) {
+          showError(err.message);
+        }
+      });
+
+      // Helper function to show error messages
+      function showError(message) {
+        // Hide success message if visible
+        successDiv.style.display = "none";
+
+        // Show error message
+        errorDiv.textContent = message;
+        errorDiv.style.display = "block";
+
+        // Re-enable submit button if disabled
+        const submitBtn = registerForm.querySelector("button[type='submit']");
+        submitBtn.textContent = "Register";
+        submitBtn.disabled = false;
+
+        // Hide error after 5 seconds
+        setTimeout(() => {
+          errorDiv.style.display = "none";
+        }, 5000);
+      }
+
+      // Helper function to show success messages
+      function showSuccess(message) {
+        // Hide error message if visible
+        errorDiv.style.display = "none";
+
+        // Show success message
+        successDiv.textContent = message;
+        successDiv.style.display = "block";
+      }
+
+      // Function to toggle password visibility
+      function togglePasswordVisibility(inputId) {
+        const passwordInput = document.getElementById(inputId);
+        const toggleIcon =
+          passwordInput.parentElement.querySelector(".password-toggle i");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          toggleIcon.className = "fa-solid fa-eye-slash"; // Closed eye icon
+        } else {
+          passwordInput.type = "password";
+          toggleIcon.className = "fa-solid fa-eye"; // Open eye icon
+        }
+      }
+    </script>
+  </body>
+</html>
