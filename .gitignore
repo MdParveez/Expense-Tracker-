@@ -1,1 +1,4 @@
 node_modules/
+# Sensitive files
+.env
+expensify-401ce-firebase-adminsdk-fbsvc-85d37cb606.json
